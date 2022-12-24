@@ -2,8 +2,8 @@
 pragma solidity 0.8.15;
 
 contract TaskContract {
-  event AddTask(address recipient, uint taskId)
-  event DeleteTask(uint taskId, bool isDelete)
+  event AddTask(address recipient, uint taskId);
+  event DeleteTask(uint taskId, bool isDelete);
 
   struct Task {
     uint id;
@@ -18,12 +18,12 @@ contract TaskContract {
     uint taskId =  tasks.length;
     tasks.push(Task(taskId, taskText, isDeleted ));
     taskToOwner[taskId] = msg.sender;
-    emit AddTask(msg.sender, taskId)
+    emit AddTask(msg.sender, taskId);
   }
 
   // get tasks that are mine and not deleted
-  function getMyTasks() external view returns (Tasks[] memory) {
-    Task[] temporary = new Task[](tasks.length);
+  function getMyTasks() external view returns (Task[] memory) {
+    Task[] memory temporary = new Task[](tasks.length);
     uint counter = 0;
 
     for(uint i=0; i<tasks.length; i++){
@@ -33,7 +33,7 @@ contract TaskContract {
       }
     }
 
-    Tasks[] memory result = new Task[](counter);
+    Task[] memory result = new Task[](counter);
     for(uint i=0; i<counter; i++){
       result[i] = temporary[i];
     }
