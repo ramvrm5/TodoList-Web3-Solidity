@@ -24,15 +24,10 @@ const tasks = [
 export default function Home() {
 
   const [correctNetwork, setCorrectNetwork] = useState(false);
-
   const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
-
   const [currentAccount, setCurrentAccount] = useState('');
-
   const [input, setInput] = useState('');
-
   const [tasks, setTasks] = useState([]);
-  
 
   useEffect(() => {
     connectWallet();
