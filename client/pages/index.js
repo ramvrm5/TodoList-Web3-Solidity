@@ -5,14 +5,10 @@ import ConnectWalletButton from '../components/ConnectWalletButton'
 import TodoList from '../components/TodoList'
 
 import TaskAbi from "../../backend/build/contracts/TaskContract.json";
-
 import { TaskContractAddress } from "../config";
 
-
 import { ethers } from "ethers";
-
 import { useEffect, useState } from 'react';
-
 /* 
 const tasks = [
   { id: 0, taskText: 'clean', isDeleted: false }, 
