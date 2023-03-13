@@ -1,6 +1,6 @@
-import WrongNetworkMessage from '../components/WrongNetworkMessage'
-import ConnectWalletButton from '../components/ConnectWalletButton'
-import TodoList from '../components/TodoList'
+import WrongNetworkMessage from '../components/WrongNetworkMessage';
+import ConnectWalletButton from '../components/ConnectWalletButton';
+import TodoList from '../components/TodoList';
 import TaskAbi from "../../backend/build/contracts/TaskContract.json";
 import { TaskContractAddress } from "../config";
 
